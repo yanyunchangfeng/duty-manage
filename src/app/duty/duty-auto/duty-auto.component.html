@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="window">
+    <div class="header">
+      <span>处室自动排班</span>
+      <i class="pi pi-times" title="关闭" (click)="close(false)"></i>
+    </div>
+    <div class="content">
+      <div class="showDetails">
+        <div class="date">
+          <div>循环起点</div>
+          <div>领导</div>
+        </div>
+        <div class="box">
+          <div *ngFor="let leader of leaders;let i = index" [class.selected]="leader.selected==true" (click)="changeAutoLeader(i)">
+              <label>{{i+1}}</label>
+              <span>{{leader.userName}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="leadader-title">
+          <div>循环起点</div>
+          <div>处长</div>
+        </div>
+        <div class="leaders">
+          <div *ngFor="let devision of devisions;let i = index" [class.selected]="devision.selected===true" (click)="changeAutoDevision(i)">
+              <label>{{i+1}}</label>
+              <span>{{devision.userName}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="devision-chief">
+        <div class="devision-title">
+          <div>循环起点</div>
+          <div>科长</div>
+        </div>
+        <div class="devisions">
+          <div *ngFor="let section of sections;let i = index"  (click)="changeAutoSection(i)" [class.selected]="section.selected">
+              <label>{{i+1}}</label>
+              <span>{{section.userName}}</span>
+          </div>
+        </div>
+      </div>
+      <!--<div class="section-chief">-->
+        <!--<div class="section-title">-->
+          <!--<div>循环起点</div>-->
+          <!--<div>民警</div>-->
+        <!--</div>-->
+        <!--<div class="sections">-->
+          <!--<div *ngFor="let policy of policys;let i = index" (click)="changeAutoPolicy(i)" [class.selected]="autoSelectPolicy[i].selected===true">-->
+              <!--<label>{{i+1}}</label>-->
+              <!--<span>{{policy.userName}}</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="footer">
+      <button class="submit" (click)="submitData(false)">确定</button>
+      <button class="reset" (click)="resetAutoDuty()">重置</button>
+    </div>
+  </div>
+</div>

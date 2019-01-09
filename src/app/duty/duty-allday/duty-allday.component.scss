@@ -1,0 +1,179 @@
+@mixin setbutton($backgroundcolor:#333){
+  background-color:$backgroundcolor ;
+  &:hover{
+    background-color: darken($backgroundcolor,15%);
+  }
+  &:active{
+    background-color: darken($backgroundcolor,30%);
+  }
+}
+@mixin setborder($borderWidth:1px,$borderStyle:solid,$borderColor:#333){
+  border: $borderWidth $borderStyle $borderColor;
+}
+@mixin common-background{
+  background: #555;
+}
+@mixin common-people-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  label{
+    width: 5rem;
+    vertical-align: middle;
+  }
+  input{
+    vertical-align: middle;
+  }
+}
+
+@mixin common-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:24px;
+  background: #363636;
+  @include setborder(1px solid #5D5D5D)
+}
+
+.container{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(255,255,255,.5);
+  .window{
+    position: absolute;
+    background: #333;
+    width:80%;
+    height:80%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    .header{
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      height: 2rem;
+      background: #282828;
+      >i{
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        margin-left: auto;
+        &:hover{
+          color: darken(#fdfdfd,20%);
+        }
+      }
+    }
+    .content{
+      display: flex;
+      padding-top: 50px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background: #333333;
+      height: 400px;
+      &>div:not(:last-child){
+        margin-right: 5px;
+      }
+      .showDetails{
+        width:25%;
+        height: 300px;
+        .date{
+           @include common-title;
+           @include setborder(1px,solid,#5d5d5d);
+        }
+        .box{
+          height: 100%;
+          @include common-background;
+          >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:1rem 0;
+            span{
+              margin-right: 1rem;
+            }
+            ul{
+              display: flex;
+              flex-flow: row wrap;
+              li{
+                padding: 0 0.2rem 0 0;
+              }
+            }
+          }
+        }
+      }
+      .leader{
+        width:25%;
+        height: 300px;
+        .leadader-title{
+          @include common-title;
+          @include setborder(1px,solid,#5d5d5d);
+        }
+        .leaders{
+          height: 100%;
+          padding: 1rem 0;
+          @include common-background;
+          overflow: auto;
+          >div{
+            @include common-people-style;
+          }
+        }
+      }
+      .devision-chief{
+        width:25%;
+        height: 300px;
+       .devision-title{
+         @include common-title;
+         @include setborder(1px,solid,#5d5d5d);
+       }
+        .devisions{
+          height: 100%;
+          padding: 1rem 0;
+          @include common-background;
+          overflow: auto;
+          >div{
+            @include common-people-style;
+          }
+        }
+      }
+      .section-chief{
+        width:25%;
+        height: 300px;
+        .section-title{
+          @include common-title;
+          @include setborder(1px,solid,#5d5d5d);
+        }
+        .sections{
+          height: 100%;
+          padding: 1rem 0;
+          @include common-background;
+          overflow: auto;
+          >div{
+            @include common-people-style;
+          }
+        }
+      }
+    }
+    .footer{
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: center;
+      button{
+        padding:.8rem 1rem;
+      }
+      .submit{
+        @include setbutton(red);
+        margin-right: 1rem;
+      }
+      .reset{
+        @include setbutton(green)
+      }
+    }
+  }
+}
+
+
+

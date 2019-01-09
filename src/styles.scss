@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+h1,h2,h3,h4,h5,h6,p,hr,ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+body{
+  // font: 0.8rem /1.2rem "microsoft yahei";
+  color: #FDFDFD;
+  margin: 0;
+}
+input,button{
+  // font: 0.8rem "microsoft yahei";
+  cursor: pointer;
+  color: #FDFDFD;
+  padding: .5rem;
+  // line-height: 1.8rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+*{
+  box-sizing: border-box;
+}
+#tipModal .content{
+  color: black;
+}
+
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/nova-light/theme.css";
+@import "~primeng/resources/primeng.min.css";

@@ -1,0 +1,160 @@
+
+
+@mixin setbutton($backgroundcolor:#333){
+  background-color:$backgroundcolor ;
+  &:hover{
+    background-color: darken($backgroundcolor,15%);
+  }
+  &:active{
+    background-color: darken($backgroundcolor,30%);
+  }
+}
+@mixin setborder($borderWidth:1px,$borderStyle:solid,$borderColor:#333){
+  border: $borderWidth $borderStyle $borderColor;
+}
+@mixin common-people-style{
+  display: flex;
+  align-items: center;
+  label{
+    width:5rem;
+    padding: 0 0.3rem 0 0;
+    vertical-align: middle;
+  }
+  input{
+    vertical-align: middle;
+  }
+}
+@mixin common-background{
+  background: #555;
+}
+@mixin common-policy-style{
+  padding: 1rem 2rem;
+  display: flex;
+  .left{
+    width:30%;
+    margin-right: 1rem;
+    .am-title{
+      height: 24px;
+      line-height: 24px;
+      display: flex;
+      @include setborder(1px,solid,#5D5D5D);
+      span{
+        padding-left: 1rem;
+        margin-right: 6rem;
+      }
+      p{align-self: center}
+    }
+    .am-policy{
+      @include common-background;
+      height: 160px;
+      overflow: auto;
+      padding: 1rem 0;
+      >div{
+        padding-left: 1rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+  .right{
+    width:70%;
+    .select{
+      height: 24px;
+      line-height: 24px;
+      padding-left: 1rem;
+      select{
+        background: #333333;
+        color: #fdfdfd;
+        width:120px;
+      }
+    }
+    .am-policy-people{
+      .am-policy-title{
+        @include setborder(1px,solid,#555555);
+        padding-left: 1rem;
+        height: 24px;
+        line-height: 24px;
+      }
+      .am-policys{
+        height: 136px;
+        overflow:auto;
+        @include common-background;
+
+        padding-left: 1rem;
+        >div{
+          @include common-people-style;
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(255,255,255,.5);
+  .window{
+    position: absolute;
+    background: #333;
+    width:80%;
+    height:80%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    .header{
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      height: 2rem;
+      background: #282828;
+      >i{
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        margin-left: auto;
+        &:hover{
+          color: darken(#fdfdfd,20%);
+        }
+      }
+    }
+    .content{
+       .am{
+         @include common-policy-style;
+       }
+      .pm{
+         @include common-policy-style;
+      }
+    }
+    .footer{
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: center;
+      button{
+        padding:.8rem 1rem;
+      }
+      .submit{
+        @include setbutton(red);
+        margin-right: 1rem;
+      }
+      .reset{
+        @include setbutton(green)
+      }
+    }
+  }
+}
+
+.common-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:24px;
+  background: #363636;
+  @include setborder(1px solid #5D5D5D)
+}
+
+
+

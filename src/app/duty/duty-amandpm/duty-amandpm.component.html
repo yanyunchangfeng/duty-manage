@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="window">
+    <div class="header">
+      <span>早晚班</span>
+      <i class="pi pi-times" title="关闭" (click)="closeDutyAmandpm(false)"></i>
+    </div>
+    <div class="content">
+      <div class="am">
+        <div class="left">
+          <div class="am-title">
+            <span>早班</span>
+            <p>{{date.month}}-{{date.showDate}}</p>
+          </div>
+          <div class="am-policy">
+             <ng-container *ngFor="let policyam of policysAm">
+               <div *ngIf="policyam.checked">
+                 <span>{{policyam.userName}}</span>
+               </div>
+             </ng-container>
+          </div>
+        </div>
+        <div class="right">
+          <div class="select">
+            <span>处室</span>
+            <select (change)="changePeopleforAmOrg(currentOrgForAm)" [(ngModel)]='currentOrgForAm'>
+              <option *ngFor="let org of organizations" value="{{org.orgId}}">{{org.orgName}}</option>
+            </select>
+          </div>
+          <div class="am-policy-people">
+            <div class="am-policy-title">民警</div>
+            <div class="am-policys">
+              <div *ngFor="let policyam of policysAm;let i=index">
+                <label for="{{policyam.workUserId}}">{{policyam.userName}}</label><input type="checkbox" id="{{policyam.workUserId}}" [checked]="policyam.checked" (change)="chooseAmPolicys(policyam.checked,i)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pm">
+        <div class="left">
+          <div class="am-title">
+            <span>晚班</span>
+            <p>{{date.month}}-{{date.showDate}}</p>
+          </div>
+          <div class="am-policy">
+            <ng-container *ngFor="let policypm of policysPm">
+              <div *ngIf="policypm.checked">
+                <span>{{policypm.userName}}</span>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="right">
+          <div class="select">
+            <span>处室</span>
+            <select [(ngModel)]='currentOrgForPm' (change)="changePeopleforPmOrg(currentOrgForPm)">
+              <option *ngFor="let org of organizations" value="{{org.orgId}}">{{org.orgName}}</option>
+            </select>
+          </div>
+          <div class="am-policy-people">
+            <div class="am-policy-title">民警</div>
+            <div class="am-policys">
+              <div *ngFor="let policypm of policysPm;let i=index">
+                <label for="{{policypm.userId}}">{{policypm.userName}}</label><input type="checkbox" id="{{policypm.userId}}" (change)="choosePmPolicys(policypm.checked,i)" [checked]="policypm.checked">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="submit" (click)="submitCurrentDateData(false)">确定</button>
+      <button class="reset"  (click)="resetAllPeople()">重置</button>
+    </div>
+  </div>
+</div>

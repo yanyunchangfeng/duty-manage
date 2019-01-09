@@ -1,0 +1,81 @@
+<div class="duty-date">
+  <h4>处室日常排班备勤</h4>
+  <div>
+    <div class="month">
+      <label>月份</label>
+      <p-calendar  view="month" [(ngModel)]="dutyDate" dateFormat="yy-mm"[showIcon]="true" (onSelect)="onDutyDateChange($event)"></p-calendar>
+    </div>
+    <div class="btn">
+      <button (click)="openDutyAutoMask()">自动排班</button>
+      <!--<button class="export">导出</button>-->
+      <button (click)="submitAllMonthDate()" class="submit">提交</button>
+    </div>
+  </div>
+</div>
+<div class="weekday">
+  <div>一</div>
+  <div>二</div>
+  <div>三</div>
+  <div>四</div>
+  <div>五</div>
+  <div>六</div>
+  <div>日</div>
+</div>
+<div class="monthDate">
+  <div class="date" *ngFor="let date of MonthData;let i=index">
+    <p>
+      <b>{{date.showDate}}</b>
+      <i class="pi pi-plus" style="font-size: 2em" *ngIf="date.month==month"(click)="showSelectDutyType(i,date,MonthData)"></i>
+      <!-- <i *ngIf="date.month==month&&date.showAddIcon"  ></i> -->
+      <select *ngIf="date.month==month&&date.showSelectType" [(ngModel)]="date.dutytypevalue" (change)="chooseTypeForMask(date.dutytypevalue,i,date)">
+        <option  *ngFor="let dutytype of date.selectTypeValue" value="{{dutytype.key}}">{{dutytype.value}}</option>
+      </select>
+    </p>
+    <div class="content">
+     <div class="allday" *ngIf="date.month==month">
+       <div class="alldaytitle">全天候</div>
+       <div class="usertype">
+         <div class="leader">
+           <div class="leader-title">领导</div>
+           <div class="content">
+             <div *ngFor="let leader of date.currentMonthData?.leaders">{{leader.userName}}</div>
+           </div>
+         </div>
+         <div class="devision">
+             <div class="leader-title">处长</div>
+             <div class="content">
+               <div *ngFor="let devision of date.currentMonthData?.devisions">{{devision.userName}}</div>
+             </div>
+         </div>
+         <div class="section">
+             <div class="leader-title">科长</div>
+             <div class="content">
+               <div *ngFor="let section of date.currentMonthData?.sections">{{section.userName}}</div>
+             </div>
+         </div>
+       </div>
+     </div>
+     <div class="amandpm" *ngIf="date.month==month">
+       <div class="am">
+         <div class="am-title">早班(民警)</div>
+         <div class="am-content">
+           <div>
+             <div *ngFor="let policyam of date.currentMonthData?.policys.am">{{policyam.userName}}</div>
+           </div>
+         </div>
+       </div>
+       <div class="pm">
+         <div class="pm-title">晚班(民警)</div>
+         <div class="pm-content">
+           <div>
+             <div *ngFor="let policypm of date.currentMonthData?.policys.pm">{{policypm.userName}}</div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+<app-duty-allday *ngIf="showAllDayMask" (closeDutyAll)="closeDutyAllDayMask($event)" (currentDateData)="saveAddLeadersData($event)"></app-duty-allday>
+<app-duty-amandpm *ngIf="showAmAndPmMask" (closeAmandpm)="closeDutyAmandpmMask($event)" (currentd)="saveAddPolicysData($event)"></app-duty-amandpm>
+<app-duty-auto *ngIf="showAutoDutyMask" (closeDutyAuto)="closeDutyAutoMask($event)" (saveCurrentMonthData)="dutyAutoAddleaders($event)"></app-duty-auto>

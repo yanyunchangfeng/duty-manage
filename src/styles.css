@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5, h6, p, hr, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font: 0.8rem /1.2rem "microsoft yahei";
+  color: #FDFDFD;
+  margin: 0;
+}
+
+input, button {
+  font: 0.8rem "microsoft yahei";
+  cursor: pointer;
+  color: #FDFDFD;
+  line-height: 1.8rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#tipModal .content {
+  color: black;
+}
+/*# sourceMappingURL=styles.css.map */

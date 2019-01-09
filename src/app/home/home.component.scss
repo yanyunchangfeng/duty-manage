@@ -1,0 +1,27 @@
+header{
+  display: flex;
+  >img{
+    margin-right: auto;
+  }
+  div{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    i{
+      color: #3A5F80;
+      font-size: 24px ;
+    }
+    >label{
+      color: #333;
+    }
+  }
+}
+hr{
+  background-color: #ddd;
+  height: 4px;
+  border: none;
+}
+section{
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background-color: #333;
+}

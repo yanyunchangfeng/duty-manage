@@ -1,0 +1,32 @@
+{
+  "leaders":[
+    {"userId":"000001","userName":"徐晓东"},
+    {"userId":"013215","userName":"张三"},
+    {"userId":"013268","userName":"李四"},
+    {"userId":"013225","userName":"马一"},
+    {"userId":"013278","userName":"牛二"},
+    {"userId":"013235","userName":"横七"},
+    {"userId":"013288","userName":"树八"}
+  ],
+  "devisions":[
+    {"userId":"003431","userName":"二哦"},
+    {"userId":"003432","userName":"三哦"},
+    {"userId":"003433","userName":"四撒"},
+    {"userId":"003434","userName":"五啊"},
+    {"userId":"003435","userName":"刘啊"}
+  ],
+  "sections":[
+    {"userId":"003436","userName":"七啊"},
+    {"userId":"003437","userName":"八啊"},
+    {"userId":"003438","userName":"九啊"},
+    {"userId":"003439","userName":"十啊"},
+    {"userId":"003440","userName":"王五"}
+  ],
+  "policys":[
+    {"userId":"003441","userName":"马八"},
+    {"userId":"003442","userName":"九爷"},
+    {"userId":"003443","userName":"三爷"},
+    {"userId":"003444","userName":"二大爷"},
+    {"userId":"003445","userName":"三大爷"}
+  ]
+}

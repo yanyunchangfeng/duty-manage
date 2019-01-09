@@ -1,0 +1,290 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.container .window {
+  position: absolute;
+  background: #333;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .window .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1rem;
+  height: 2rem;
+  background: #282828;
+}
+
+.container .window .header > i {
+  font-size: 24px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.container .window .header > i:hover {
+  color: #cacaca;
+}
+
+.container .window .content .am {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .window .content .am .left {
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.container .window .content .am .left .am-title {
+  height: 24px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #5D5D5D;
+}
+
+.container .window .content .am .left .am-title span {
+  padding-left: 1rem;
+  margin-right: 6rem;
+}
+
+.container .window .content .am .left .am-title p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .window .content .am .left .am-policy {
+  background: #555;
+  height: 160px;
+  overflow: auto;
+  padding: 1rem 0;
+}
+
+.container .window .content .am .left .am-policy > div {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.container .window .content .am .right {
+  width: 70%;
+}
+
+.container .window .content .am .right .select {
+  height: 24px;
+  line-height: 24px;
+  padding-left: 1rem;
+}
+
+.container .window .content .am .right .select select {
+  background: #333333;
+  color: #fdfdfd;
+  width: 120px;
+}
+
+.container .window .content .am .right .am-policy-people .am-policy-title {
+  border: 1px solid #555555;
+  padding-left: 1rem;
+  height: 24px;
+  line-height: 24px;
+}
+
+.container .window .content .am .right .am-policy-people .am-policys {
+  height: 136px;
+  overflow: auto;
+  background: #555;
+  padding-left: 1rem;
+}
+
+.container .window .content .am .right .am-policy-people .am-policys > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.5rem;
+}
+
+.container .window .content .am .right .am-policy-people .am-policys > div label {
+  width: 5rem;
+  padding: 0 0.3rem 0 0;
+  vertical-align: middle;
+}
+
+.container .window .content .am .right .am-policy-people .am-policys > div input {
+  vertical-align: middle;
+}
+
+.container .window .content .pm {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .window .content .pm .left {
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.container .window .content .pm .left .am-title {
+  height: 24px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #5D5D5D;
+}
+
+.container .window .content .pm .left .am-title span {
+  padding-left: 1rem;
+  margin-right: 6rem;
+}
+
+.container .window .content .pm .left .am-title p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .window .content .pm .left .am-policy {
+  background: #555;
+  height: 160px;
+  overflow: auto;
+  padding: 1rem 0;
+}
+
+.container .window .content .pm .left .am-policy > div {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.container .window .content .pm .right {
+  width: 70%;
+}
+
+.container .window .content .pm .right .select {
+  height: 24px;
+  line-height: 24px;
+  padding-left: 1rem;
+}
+
+.container .window .content .pm .right .select select {
+  background: #333333;
+  color: #fdfdfd;
+  width: 120px;
+}
+
+.container .window .content .pm .right .am-policy-people .am-policy-title {
+  border: 1px solid #555555;
+  padding-left: 1rem;
+  height: 24px;
+  line-height: 24px;
+}
+
+.container .window .content .pm .right .am-policy-people .am-policys {
+  height: 136px;
+  overflow: auto;
+  background: #555;
+  padding-left: 1rem;
+}
+
+.container .window .content .pm .right .am-policy-people .am-policys > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.5rem;
+}
+
+.container .window .content .pm .right .am-policy-people .am-policys > div label {
+  width: 5rem;
+  padding: 0 0.3rem 0 0;
+  vertical-align: middle;
+}
+
+.container .window .content .pm .right .am-policy-people .am-policys > div input {
+  vertical-align: middle;
+}
+
+.container .window .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .window .footer button {
+  padding: 0.3rem 0.8rem;
+}
+
+.container .window .footer .submit {
+  background-color: red;
+  margin-right: 1rem;
+}
+
+.container .window .footer .submit:hover {
+  background-color: #b30000;
+}
+
+.container .window .footer .submit:active {
+  background-color: #660000;
+}
+
+.container .window .footer .reset {
+  background-color: green;
+}
+
+.container .window .footer .reset:hover {
+  background-color: #003400;
+}
+
+.container .window .footer .reset:active {
+  background-color: black;
+}
+
+.common-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 24px;
+  background: #363636;
+  border: 1px solid #5D5D5D solid #333;
+}
+/*# sourceMappingURL=duty-amandpm.component.css.map */

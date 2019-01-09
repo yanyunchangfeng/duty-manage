@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="window">
+    <div class="header">
+      <span>全天候排班</span>
+      <i class="pi pi-times" title="关闭" (click)="closeDutyAllDay(false)"></i>
+    </div>
+    <div class="content">
+      <div class="showDetails">
+        <div class="date">{{date.month}}-{{date.showDate}}</div>
+        <div class="box">
+          <div class="box-leader">
+            <span>领导</span>
+            <ul>
+              <ng-container *ngFor="let leader of leaders">
+                <li *ngIf="leader.checked">{{leader.userName}}</li>
+              </ng-container>
+            </ul>
+          </div>
+          <div class="box-devision">
+            <span>处长</span>
+            <ul>
+              <ng-container *ngFor="let devision of devisionsChiefs">
+                <li *ngIf="devision.checked">{{devision.userName}}</li>
+              </ng-container>
+            </ul>
+          </div>
+          <div class="box-section">
+            <span>科长</span>
+            <ul>
+              <ng-container *ngFor="let section of sectionChiefs">
+                <li *ngIf="section.checked">{{section.userName}}</li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="leader">
+        <div class="leadader-title">领导</div>
+        <div class="leaders">
+          <ng-container *ngFor="let leader of leaders;let i=index;">
+            <div>
+              <label for="{{leader.userId}}">{{leader.userName}}</label><input type="checkbox" id="{{leader.userId}}" [checked]="leader.checked" (change)="chooseLeader(leader.checked,i)">
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="devision-chief">
+        <div class="devision-title">处长</div>
+        <div class="devisions">
+          <div *ngFor="let devision of devisionsChiefs;let i= index">
+            <label for="{{devision.userId}}">{{devision.userName}}</label><input type="checkbox" id="{{devision.userId}}" [checked]="devision.checked" (change)="chooseDevision(devision.checked,i)">
+          </div>
+        </div>
+      </div>
+      <div class="section-chief">
+        <div class="section-title">科长</div>
+        <div class="sections">
+          <div *ngFor="let section of sectionChiefs;let i=index">
+            <label for="{{section.userId}}">{{section.userName}}</label><input type="checkbox" id="{{section.userId}}" [checked]="section.checked" (change)="chooseSection(section.checked,i)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="submit" (click)="submitCurrentDateData(false)">确定</button>
+      <button class="reset" (click)="resetAllPeople()">重置</button>
+    </div>
+  </div>
+</div>

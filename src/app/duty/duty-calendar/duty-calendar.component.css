@@ -1,0 +1,277 @@
+.duty-date {
+  min-height: 40px;
+  border: 1px solid #6A6A6A;
+}
+
+.duty-date h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0.5rem;
+  height: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #636363;
+}
+
+.duty-date > div {
+  padding-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #555;
+}
+
+.duty-date > div > .month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+}
+
+.duty-date > div > .month label {
+  padding-right: 1rem;
+}
+
+.duty-date > div > .month input {
+  padding: 0.3rem 0.3rem;
+}
+
+.duty-date > div > .btn {
+  padding-right: 1.5rem;
+}
+
+.duty-date > div > .btn button:first-child {
+  margin-right: 1.5rem;
+  background-color: #FA2A43;
+}
+
+.duty-date > div > .btn button:first-child:hover {
+  background-color: #eb0621;
+}
+
+.duty-date > div > .btn button:first-child:active {
+  background-color: #fc8e9b;
+}
+
+.duty-date > div > .btn button.export {
+  margin-right: 1.5rem;
+  background-color: #333;
+}
+
+.duty-date > div > .btn button.export:hover {
+  background-color: #1a1a1a;
+}
+
+.duty-date > div > .btn button.export:active {
+  background-color: #666666;
+}
+
+.duty-date > div > .btn button.submit {
+  background-color: #FA2A43;
+}
+
+.duty-date > div > .btn button.submit:hover {
+  background-color: #eb0621;
+}
+
+.duty-date > div > .btn button.submit:active {
+  background-color: #fc8e9b;
+}
+
+.weekday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #424242;
+  margin: 1rem 0;
+}
+
+.weekday > div {
+  border-right: 1px solid #424242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
+  width: 16.66667%;
+}
+
+.monthDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-right: 1px solid #505050;
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date {
+  border-top: 1px solid #505050;
+  border-left: 1px solid #505050;
+  width: 14.28571%;
+}
+
+.monthDate .date > p {
+  border-bottom: 1px solid #505050;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.monthDate .date > p b {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.monthDate .date > p > i {
+  font-size: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.monthDate .date > p > i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.monthDate .date > .content {
+  min-height: 150px;
+}
+
+.monthDate .date > .content .allday {
+  min-height: 100px;
+}
+
+.monthDate .date > .content .allday .alldaytitle {
+  color: #E90808;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date > .content .allday .usertype {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date > .content .allday .usertype .section {
+  border-right: none;
+}
+
+.monthDate .date > .content .allday .usertype .section .leader-title {
+  border-right: none;
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date > .content .allday .usertype > div {
+  width: 33.33333%;
+  text-align: center;
+  border-right: 1px solid #505050;
+}
+
+.monthDate .date > .content .allday .usertype > div .leader-title {
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date > .content .amandpm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.monthDate .date > .content .amandpm > div {
+  width: 50%;
+}
+
+.monthDate .date > .content .amandpm .am {
+  border-right: 1px solid #505050;
+}
+
+.monthDate .date > .content .amandpm .am .am-title {
+  border-bottom: 1px solid #505050;
+  height: 24px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.monthDate .date > .content .amandpm .am .am-content {
+  min-height: 100px;
+}
+
+.monthDate .date > .content .amandpm .am .am-content > div {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.monthDate .date > .content .amandpm .pm .pm-title {
+  height: 24px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #505050;
+}
+
+.monthDate .date > .content .amandpm .pm .pm-content {
+  min-height: 100px;
+}
+
+.monthDate .date > .content .amandpm .pm .pm-content > div {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=duty-calendar.component.css.map */
