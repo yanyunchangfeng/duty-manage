@@ -32,7 +32,7 @@ export class DutyCalendarComponent extends BasePage implements OnInit {
     this.month = this.dutyDate.getMonth() + 1;
     this.planTime = this.year + '-' + this.month;
     this.MonthData = this.getMonthData(this.year, this.month);
-    console.log(this.MonthData,this.month)
+    // console.log(this.MonthData,this.month)
     // for(let i=0;i<this.MonthData.length;i++){
     //   this.MonthData[i].currentMonthData={
     //     leaders:[],
@@ -438,6 +438,17 @@ export class DutyCalendarComponent extends BasePage implements OnInit {
     this.month = this.dutyDate.getMonth() + 1;
     this.planTime = this.year + '-' + this.month;
     this.MonthData = this.getMonthData(this.year, this.month);
+    for(let i=0;i<this.MonthData.length;i++){
+      this.MonthData[i].currentMonthData={
+        leaders:[],
+        devisions:[],
+        sections:[],
+        policys:{
+          am:[],
+          pm:[],
+        }
+      }
+    }
   }
   openDutyAutoMask(){
     this.showAutoDutyMask = true;

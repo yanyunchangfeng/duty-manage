@@ -248,37 +248,7 @@ export class DutyAutoComponent implements OnInit {
     this.saveCurrentMonthData.emit(currentMonthData);
     this.closeDutyAuto.emit(boolean)
   }
-  getCurrentChooseLeaderIndex(){
-    return parseInt(this.storageService.getAutoLeaderIndex('autoleaderindex'));
-  }
-  getCurrentChooseDevisionIndex(){
-    return parseInt(this.storageService.getAutoDevisionIndex('autodevisionindex'));
-  }
-  getCurrentChooseSectionIndex(){
-    return parseInt(this.storageService.getAutoSectionIndex('autosectionindex'));
-  }
   resetAutoDuty(){
-    // for(let i=0;i<this.autoSelectLeader.length;i++){
-    //   if(i === 0){
-    //     this.autoSelectLeader[i].selected = true;
-    //   }else{
-    //     this.autoSelectLeader[i].selected = false;
-    //   }
-    // }
-    // for(let i=0;i<this.autoSelectDevision.length;i++){
-    //   if(i === 0){
-    //     this.autoSelectDevision[i].selected = true;
-    //   }else{
-    //     this.autoSelectDevision[i].selected = false;
-    //   }
-    // }
-    // for(let i=0;i<this.autoSelectSection.length;i++){
-    //   if(i === 0){
-    //     this.autoSelectSection[i].selected = true;
-    //   }else{
-    //     this.autoSelectSection[i].selected = false;
-    //   }
-    // }
     this.initAutoSelected(this.leaders,1);
     this.initAutoSelected(this.devisions,1);
     this.initAutoSelected(this.sections,2);
