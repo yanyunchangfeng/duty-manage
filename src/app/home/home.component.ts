@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  currentLoginUserName = 'Coder浪漫的野马';
+  currentLoginUserName = '燕云长风';
   constructor() { }
 
   ngOnInit() {

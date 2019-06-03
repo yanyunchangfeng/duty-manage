@@ -24,6 +24,7 @@
     "primeicons": "^1.0.0",
     "primeng": "^7.0.3",
     "rxjs": "~6.3.3",
+    "yycf-dialog": "^9.9.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
