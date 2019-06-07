@@ -8,7 +8,7 @@ const routes: Routes = [
     children: [
       {
         path: 'duty',
-        loadChildren: '../duty/duty.module#DutyModule',
+        loadChildren: () => import('../duty/duty.module').then(m => m.DutyModule),
         data: { preload: true }
       }
     ]

@@ -17,8 +17,6 @@ export class AppComponent implements OnInit {
         header: 'waiting',
         okVisible: false,
         offVisible: false,
-        okButton: 'blue',
-        offButton: 'green',
         okLabel: ``,
         key: "1",
         offLabel: ``,
